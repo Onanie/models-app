@@ -1,23 +1,32 @@
-# Getting Started with Create React App
+# Getting Started with Models-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+first, for security reasons, the api_key for the app has been removed, since this is a public repository.
+after downloading the project folder open the folder in IDE of your choice and navigate to src/constants.
+plug in the api_key in this line : export const API_KEY = ""; (remove the asterisk), save the file.
+open the terminal and navigate to the folder where the project resides.
+type npm start on the terminal and wait.
+a new tab on the browser will open and display the project, usualy on http://localhost:3000
+the terminal will display anything related to the project, eg: issues, success,..
 
-## Available Scripts
+## how the app works
 
-In the project directory, you can run:
+the app will show the home page, there, you should see the metadata for "Drink choice" model and a list of input variables.
+when you click any input variable, you should see its details on the right. 
+you also have the option to search for any model using model id.
 
-### `npm start`
+### enhancements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+i have added the following to make the app prettier:
+* navigation bar at the top using bootstrap (tried using TailwindCss, you will see some of the setup)
+* added local storage, for the user to save
+* added all the batch methods
+* added activity indicators when loading data
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### challengs
 
-### `npm test`
+i had challengs testing: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+queryModel method, i tested using id's obtained from the api, but all of the returned status: 400 (bad model id)
 
 ### `npm run build`
 
